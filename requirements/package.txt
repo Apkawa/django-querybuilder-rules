@@ -1,0 +1,7 @@
+setuptools>=30
+six
+python-dateutil
+sympy
+jinja2
+django-extended-choices
+jsonschema

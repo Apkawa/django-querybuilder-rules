@@ -1,0 +1,7 @@
+recommonmark
+Sphinx
+recommonmark
+alabaster
+# Google docstrings
+sphinxcontrib-napoleon
+
