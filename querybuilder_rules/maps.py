@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 
 import operator as op
+from decimal import Decimal
+
 from dateutil.parser import parse as parse_datetime, parserinfo
 
 from django.utils.encoding import smart_text, smart_str

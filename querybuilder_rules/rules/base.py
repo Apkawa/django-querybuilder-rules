@@ -11,6 +11,15 @@ class BaseRule(object):
         self.ruleset_conditions = list(map(RuleCondition, ruleset or []))
         self.extra_context = extra_context or {}
 
+    def execute(self, context, take_first=True):
+        results = []
+        for iter_res, context in self.apply_ruleset([context]):
+            for res in iter_res:
+                if take_first:
+                    return res
+                results.append(res)
+        return results
+
     @staticmethod
     def build_group_context(value_fields_dict, calculate_result=None):
         context = {
